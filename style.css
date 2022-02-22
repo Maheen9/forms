@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    width: 100%;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+ul{
+    display: flex;
+    list-style: none;
+    
+}
+li a{
+    padding: 2rem;
+    text-decoration: none;
+    line-height: 5rem;
+}
+#checkbtn{
+    display: block;
+}
+.ch{
+    float: right;
+    display: block;
+}
+#order{
+    background: #5b0eeb;
+    padding: 2%;
+}
+#order form{
+    width: 80%;
+    border-radius: 2rem;
+    box-shadow: 12px 12px 20px rgba(0,0,0,0.4), -13px -8px 20px 0px rgba(84,46,197,0.5);
+    padding: 2rem;
+    background: #5b0eeb;
+    margin: 0 auto;
+}
+#order form .inputboxes{
+    margin-top: -3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#order form .inputboxes .inputs{
+    width: 49%;
+}
+#order form .inputboxes .inputs span{
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.3rem;
+}
+
+.inputs input,textarea{
+    background: #5b0eeb;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    padding: 2%;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-shadow: inset 6px 6px 14px rgba(0,0,0,.4), inset -7px -7px 14px 0px rgba(84,46,197,.5);
+}
+
+.inputs input{
+    height: 3rem;
+}
+#order form .btn{ 
+    color: #000;
+    box-shadow: 12px 12px 20px rgba(0,0,0,0.4), -13px -8px 20px 0px rgba(84,46,197,0.5);
+}
+#order form .btn:hover{
+    box-shadow: inset 6px 6px 14px rgba(0,0,0,.4), inset -7px -7px 14px 0px rgba(84,46,197,.5);
+}
+
+@media (max-width:650px){
+    header{
+        position: relative;
+        left: -100%;
+        transition: .5s all;
+        height: 100vh;
+    }
+    ul{
+        display: block;
+        
+    }
+    li a{
+        height: 100%;
+        display: flex;
+    }
+    .ch{
+        position: fixed;
+        cursor: pointer;
+        display: block;
+        font-size: 2rem;
+        margin-left: 25rem;
+        margin-top: 1rem;
+        z-index: 2;
+    }
+    #checkbtn:checked ~ header{
+        left: 0;
+    }
+}
